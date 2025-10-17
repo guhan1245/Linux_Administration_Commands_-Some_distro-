@@ -1,0 +1,43 @@
+===========================================================
+👥 USER & GROUP MANAGEMENT
+===========================================================
+whoami                           → Show current logged-in user
+id                                → Display detailed user and group information
+who                               → List all currently logged-in users
+last                              → Show login history of users
+
+adduser <username>                → Create a new user interactively
+useradd -m -s /bin/bash <user>    → Create user with home directory and shell
+deluser <username>                → Delete a user (keep files)
+userdel -r <username>             → Delete user and their home directory
+passwd <username>                 → Change a specific user’s password
+passwd                            → Change current user’s password
+
+usermod -l <new> <old>            → Rename an existing user
+usermod -aG <group> <user>        → Add user to an existing group
+usermod -aG sudo <user>           → Give user admin (sudo) privileges
+passwd -l <user>                  → Lock a user account
+passwd -u <user>                  → Unlock a user account
+
+groupadd <group>                  → Create a new group
+groupdel <group>                  → Delete a group
+gpasswd -a <user> <group>         → Add user to a group
+gpasswd -d <user> <group>         → Remove user from a group
+groups <user>                     → Show all groups for a user
+cat /etc/group                    → List all system groups
+
+chown <user> <file>               → Change file owner
+chgrp <group> <file>              → Change group ownership
+chown <user>:<group> <file>       → Change both owner and group
+chmod 755 <file>                  → Set file permissions (rwxr-xr-x)
+chmod u+x <file>                  → Add execute permission for owner
+ls -l                             → View file ownership and permissions
+
+cat /etc/passwd                   → List all users on the system
+grep <user> /etc/passwd           → Check details of a specific user
+grep '^sudo' /etc/group           → Show all users in the sudo group
+sudo -l                           → Check sudo privileges of the current user
+
+su - <user>                       → Switch to another user
+exit                              → Return to previous user
+whoami                            → Show current active user (again)
