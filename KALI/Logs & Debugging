@@ -1,0 +1,14 @@
+===========================================================
+🧾 LOGS & DEBUGGING
+===========================================================
+
+cat /var/log/syslog                 → View general system log
+cat /var/log/auth.log               → View authentication log
+journalctl -xe                      → Show detailed systemd logs with errors
+dmesg | grep -i error               → Show kernel error messages
+tail -f /var/log/syslog             → Follow system log updates in real-time
+less /var/log/kern.log              → View kernel log file page by page
+lastlog                              → Show last login information for all users
+journalctl --disk-usage             → Show disk usage of journal logs
+journalctl -u <service>             → Show logs for a specific service
+systemctl status <service>          → Show service status along with logs
