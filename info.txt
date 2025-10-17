@@ -1,0 +1,5 @@
+Repository Contain SOme Distro Command Based on linux..
+1. UBUNTU
+2. KALI
+3. RED HAT
+4. AMAZON LINUX
