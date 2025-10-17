@@ -1,0 +1,61 @@
+===========================================================
+📁 FILE SYSTEM NAVIGATION & MANAGEMENT
+===========================================================
+
+pwd                                 → Show current working directory
+ls                                  → List files and directories
+ls -l                               → List with detailed info (permissions, size, date)
+ls -a                               → List all files including hidden files
+ls -lh                              → Human-readable file sizes
+tree                                → Display directory structure in tree format
+
+cd /path/to/dir                     → Change directory
+cd ~                                → Go to home directory
+cd ..                               → Move one directory up
+cd -                                → Go back to previous directory
+
+mkdir <dir>                         → Create a new directory
+mkdir -p /path/to/new/dir           → Create nested directories
+
+rmdir <dir>                         → Remove an empty directory
+rm -rf <dir>                        → Forcefully remove a directory and its contents
+
+touch <file>                        → Create an empty file
+cp <source> <destination>           → Copy file to another location
+cp -r <dir1> <dir2>                 → Copy directory recursively
+mv <old> <new>                      → Rename or move a file/directory
+rm <file>                           → Delete a file
+
+cat <file>                          → View file contents
+less <file>                         → View file page by page
+head <file>                         → Show first 10 lines of a file
+tail <file>                         → Show last 10 lines of a file
+tail -f <file>                      → Follow file updates in real time
+
+find / -name <file>                 → Search for a file by name
+find /home -type f -name "*.txt"    → Find all .txt files under /home
+locate <file>                       → Quickly find a file (uses database)
+updatedb                            → Update file location database for ‘locate’
+
+du -h                               → Show disk usage of directories
+du -sh *                            → Show size of each item in current directory
+df -h                               → Show disk space usage (human-readable)
+df -Th                              → Show disk usage with filesystem type
+lsblk                               → List all storage devices and partitions
+mount                               → Show mounted filesystems
+mount /dev/sdX1 /mnt                → Mount a device manually
+umount /mnt                         → Unmount a device
+
+file <filename>                     → Identify file type
+stat <filename>                     → Display detailed file information (size, modify time)
+basename /path/file                 → Show filename only
+dirname /path/file                  → Show directory name from full path
+
+ln <target> <linkname>              → Create hard link
+ln -s <target> <linkname>           → Create symbolic (soft) link
+
+history                             → Show command history
+history | grep <keyword>            → Search history for a specific command
+
+clear                               → Clear the terminal screen
+reset                               → Reset terminal display
