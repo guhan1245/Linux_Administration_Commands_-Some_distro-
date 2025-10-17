@@ -1,0 +1,41 @@
+===========================================================
+🌐 NETWORK CONFIGURATION & TROUBLESHOOTING
+===========================================================
+
+ip a                                → Show all network interfaces and IP addresses
+ip addr show                         → Alternative to view interface details
+ifconfig                             → Display network interfaces (legacy)
+ip link show                          → Show link-layer info for interfaces
+ip route                              → Show routing table
+route -n                               → Show numeric routing table
+
+ping <host>                           → Test connectivity to a host
+traceroute <host>                     → Trace path packets take to a host
+mtr <host>                            → Continuous network trace and stats
+
+netstat -tuln                          → Show listening ports and connections
+ss -tuln                               → Modern alternative to netstat
+lsof -i                                → List processes using network sockets
+ss -s                                  → Show summary of socket statistics
+
+curl <url>                             → Get data from a URL
+curl -I <url>                          → Get HTTP headers from a URL
+wget <url>                             → Download files from a URL
+
+hostname                               → Show current hostname
+hostname -I                             → Display all assigned IP addresses
+
+nmcli dev show                          → Show NetworkManager device details
+nmcli con show                          → List all network connections
+
+ethtool <interface>                     → Show Ethernet interface details
+iwconfig                               → Show wireless interface configuration
+iwlist <interface> scan                 → Scan available Wi-Fi networks
+
+arp -a                                  → Show ARP cache (IP ↔ MAC mappings)
+nmap -sn <network/mask>                 → Ping scan to discover live hosts
+netdiscover -r <network/mask>           → Discover devices on local network
+
+scp <file> user@host:/path              → Secure copy files to remote host
+ssh <user>@<host>                        → Connect to remote host via SSH
+rsync -avz <source> <user>@<host>:/dest → Sync files to remote host
