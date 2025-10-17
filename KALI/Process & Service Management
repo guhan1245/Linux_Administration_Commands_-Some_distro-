@@ -1,0 +1,40 @@
+===========================================================
+⚙️ PROCESS & SERVICE MANAGEMENT
+===========================================================
+
+ps aux                              → List all running processes with details
+ps -ef                               → Alternative process list format
+top                                  → Real-time process monitoring
+htop                                 → Interactive process viewer with colors
+atop                                 → Advanced system and process monitor
+pgrep <process_name>                 → Find process ID(s) by name
+pidof <process_name>                 → Get PID of a process
+
+kill <PID>                           → Terminate a process by PID
+kill -9 <PID>                        → Forcefully terminate a process
+pkill <process_name>                  → Kill processes by name
+killall <process_name>                → Kill all processes with the given name
+
+nice -n <priority> <command>         → Run command with specific priority
+renice <priority> -p <PID>           → Change priority of running process
+
+jobs                                  → List background jobs
+fg <job_number>                        → Bring a background job to foreground
+bg <job_number>                        → Resume a job in background
+
+systemctl status <service>            → Show status of a service
+systemctl start <service>             → Start a service
+systemctl stop <service>              → Stop a service
+systemctl restart <service>           → Restart a service
+systemctl reload <service>            → Reload service configuration
+systemctl enable <service>            → Enable service at boot
+systemctl disable <service>           → Disable service at boot
+
+service --status-all                  → List all services and their status
+service <service> start               → Start a service (SysV style)
+service <service> stop                → Stop a service
+service <service> restart             → Restart a service
+
+journalctl -u <service>               → Show logs for a specific service
+systemctl list-units --type=service   → List all active services
+systemctl list-unit-files             → Show enabled/disabled services
