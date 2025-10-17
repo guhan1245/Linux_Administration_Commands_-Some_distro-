@@ -1,0 +1,24 @@
+===========================================================
+👥 USER & GROUP MANAGEMENT
+===========================================================
+
+whoami                                 → Show current logged-in user
+id                                     → Display user ID and group info
+who                                    → Show logged-in users
+w                                      → Show active users and their processes
+users                                  → List currently logged-in users
+last                                   → Show recent login history
+sudo adduser <username>                → Create a new user
+sudo passwd <username>                 → Set or change user password
+sudo deluser <username>                → Delete a user
+sudo usermod -aG <group> <username>   → Add user to a group
+groups <username>                      → Show groups a user belongs to
+cat /etc/passwd                        → Show user account info
+cat /etc/group                         → Show group info
+cat /etc/shadow                        → Show encrypted user passwords (root only)
+sudo addgroup <groupname>              → Create a new group
+sudo delgroup <groupname>              → Delete a group
+sudo su - <user>                       → Switch to another user
+sudo visudo                            → Edit sudo privileges safely
+sudo usermod -l <newname> <oldname>   → Rename a user
+sudo chage -l <username>               → Show password expiry info
