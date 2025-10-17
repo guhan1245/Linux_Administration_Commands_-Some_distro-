@@ -1,0 +1,16 @@
+===========================================================
+💽 BACKUP, COMPRESSION & ARCHIVING
+===========================================================
+
+tar -czvf backup.tar.gz /path          → Create a compressed tar.gz archive
+tar -xzvf backup.tar.gz                → Extract a tar.gz archive
+tar -xjvf backup.tar.bz2               → Extract a tar.bz2 archive
+gzip <file>                            → Compress a file using gzip
+gunzip <file.gz>                        → Decompress a gzip file
+zip backup.zip /path                    → Create a zip archive
+unzip backup.zip                        → Extract a zip archive
+rsync -av /source/ /destination/       → Sync directories with archive mode
+rsync -avz /source/ user@host:/dest    → Sync directories to remote host via SSH
+cp -r /etc /backup/etc                  → Backup directories recursively
+dd if=/dev/sdX of=/path/backup.img     → Create raw disk/partition backup
+scp /path/file user@host:/path         → Copy files to remote host securely
