@@ -1,0 +1,22 @@
+===========================================================
+📊 SYSTEM MONITORING & PERFORMANCE
+===========================================================
+
+uptime                              → Show system uptime and load averages
+top                                 → Real-time process and resource monitoring
+htop                                → Interactive process viewer with CPU/memory graphs
+atop                                → Advanced system and process monitor
+glances                             → Comprehensive system monitor (install first)
+vmstat 1                             → Show memory, CPU, and I/O stats every 1 second
+mpstat 1                             → Show CPU usage per processor core
+pidstat 1                            → Monitor CPU usage by process
+free -h                               → Show total, used, and free memory
+sar -u 1 3                            → Display CPU utilization (3 samples every 1s)
+iostat 1                              → Show CPU and disk I/O statistics
+dstat                                 → Show CPU, disk, network, and IO in real-time
+nmon                                  → Interactive performance monitoring tool
+sensors                               → Show hardware temperature sensors
+watch -n 1 nproc                       → Monitor number of CPU cores in real-time
+df -h                                  → Show disk space usage in human-readable format
+du -sh *                               → Show size of files/directories in current folder
+lsblk                                   → Display all block devices and partitions
