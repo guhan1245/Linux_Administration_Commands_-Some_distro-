@@ -1,0 +1,198 @@
+===========================================================
+💻 BASIC SYSTEM INFORMATION
+===========================================================
+uname -a                     → Show full system info (kernel, arch, hostname)
+uname -r                     → Display kernel version only
+hostnamectl                  → Display hostname, OS, and kernel details
+cat /etc/os-release           → Show Kali Linux version and details
+lsb_release -a               → Display Linux Standard Base and distro info
+cat /proc/version            → Show kernel and compiler details
+uptime                       → Show system uptime and load average
+whoami                       → Show current logged-in username
+id                           → Show user ID, group ID, and groups
+env                          → Show environment variables
+set                          → Show all shell variables and functions
+lsmod                        → List loaded kernel modules
+sysctl -a                    → Show all kernel parameters
+
+===========================================================
+⚙️ HARDWARE INFORMATION
+===========================================================
+lscpu                        → Display CPU architecture information
+cat /proc/cpuinfo            → Show detailed CPU information
+cat /proc/meminfo            → Show detailed memory information
+free -h                      → Display total, used, and free memory
+sudo dmidecode               → Display complete hardware information
+sudo dmidecode -t system     → Show system manufacturer, model, serial number
+sudo dmidecode -t bios       → Show BIOS/UEFI information
+sudo dmidecode -t memory     → Show memory slot and module details
+sudo dmidecode -t processor  → Show CPU details from BIOS
+sudo lshw                    → List all hardware devices in detail
+sudo lshw -short             → Short hardware summary
+sudo hwinfo                  → Complete hardware diagnostic info
+lspci                        → List PCI devices
+lsusb                        → List USB devices
+lsblk                        → Show block devices (drives, partitions)
+blkid                        → Show block device UUIDs and filesystem types
+sudo fdisk -l                → List disks and partitions
+sudo parted -l               → Show partition tables
+df -h                        → Show disk space usage (human-readable)
+du -h --max-depth=1 /        → Show disk usage per directory
+lsscsi                       → Show SCSI devices
+xinput list                  → List input devices (keyboard, mouse)
+xrandr                       → Show display/resolution information
+
+===========================================================
+🌐 NETWORK INFORMATION
+===========================================================
+ip a                         → Show network interfaces and IPs
+ifconfig                     → Show network configuration (legacy)
+ip link show                 → Show link-layer (interface) information
+ip route                     → Show routing table
+netstat -tuln                → Show listening ports and connections
+ss -tuln                     → Modern version of netstat
+lsof -i                      → Show processes using network sockets
+ping 8.8.8.8                 → Test internet connectivity
+traceroute google.com        → Trace route to destination
+nslookup google.com          → DNS lookup using resolver
+dig google.com               → Detailed DNS query
+hostname -I                  → Display all assigned IP addresses
+ethtool eth0                 → Show Ethernet device info
+iwconfig                     → Show wireless configuration
+nmcli dev show               → Show NetworkManager details
+route -n                     → Show routing table (numeric)
+arp -a                       → Show ARP cache (IP to MAC mappings)
+nmap -sn 192.168.1.0/24      → Network ping scan
+curl ifconfig.me              → Show public IP address
+netdiscover -r 192.168.1.0/24 → Discover devices on local network
+ss -s                        → Show network statistics summary
+iwlist wlan0 scan            → List available Wi-Fi networks
+
+===========================================================
+💾 DISK & FILE SYSTEM
+===========================================================
+mount | column -t            → Show mounted file systems
+cat /etc/fstab               → Show filesystems mounted at boot
+findmnt                      → Display mounted devices in tree view
+df -Th                       → Show filesystem type and disk usage
+du -sh *                     → Show disk usage for folders
+tune2fs -l /dev/sda1         → Show ext filesystem parameters
+sudo smartctl -a /dev/sda    → Show disk health info (SMART data)
+iostat                       → Display I/O statistics
+lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL → Detailed block device info
+file -s /dev/sda1            → Detect filesystem type
+sudo badblocks -v /dev/sda1  → Check for bad sectors
+
+===========================================================
+📊 PERFORMANCE & RESOURCE MONITORING
+===========================================================
+top                          → Real-time process and resource monitor
+htop                         → Enhanced top with colors (install if needed)
+atop                         → Advanced performance monitor
+glances                      → Full system monitor (requires installation)
+vmstat                       → Show memory, CPU, and I/O stats
+mpstat                       → Show CPU usage per processor
+pidstat                      → Show CPU usage by each process
+free -m                      → Show memory usage in MB
+sar -u 1 3                   → Display CPU usage over time
+ps aux                       → List all processes with details
+pstree                       → Show processes in tree format
+iostat                       → Show CPU and disk I/O stats
+dstat                        → Show CPU, disk, and network stats together
+nmon                         → Interactive performance monitor
+sensors                      → Show temperature sensors
+watch -n 1 nproc             → Monitor number of CPU cores live
+
+===========================================================
+🔐 USERS & GROUPS
+===========================================================
+who                          → Show logged-in users
+w                            → Show who is logged in and what they’re doing
+users                        → List current users
+last                         → Show login history
+lastlog                      → Show last login info for all users
+cat /etc/passwd              → Show list of system users
+cat /etc/group               → Show system groups
+id <username>                → Show UID, GID, and groups for a user
+groups <username>            → List all groups for a user
+finger <username>            → Display user info (install if needed)
+sudo cat /etc/sudoers        → Show sudo privileges
+sudo -l                      → List allowed sudo commands for user
+
+===========================================================
+📦 SOFTWARE & PACKAGES
+===========================================================
+dpkg -l                      → List all installed packages
+apt list --installed         → Show installed packages
+apt show <package>           → Show package details
+apt search <keyword>         → Search for a package
+which <command>              → Find path to executable
+whereis <command>            → Find binary, source, and man page
+locate <file>                → Locate files quickly
+updatedb                     → Update locate database
+man <command>                → Show command manual
+alias                        → Show all defined command aliases
+
+===========================================================
+🛡️ SECURITY & FORENSICS
+===========================================================
+auditctl -l                  → List active audit rules
+ausearch -m avc,user_avc,selinux_err → Search audit logs
+getenforce                   → Check SELinux status
+aa-status                    → Show AppArmor profile status
+chkrootkit                   → Scan system for rootkits
+rkhunter --check             → Rootkit scan tool
+ufw status verbose            → Show UFW firewall status
+iptables -L -n -v            → Show firewall rules
+sshd -T                      → Show SSH daemon configuration
+cat /etc/shadow              → Show user password hashes (root only)
+
+===========================================================
+🧩 COMPLETE SYSTEM OVERVIEW
+===========================================================
+neofetch                     → Fancy ASCII system overview
+screenfetch                  → System summary with logo
+inxi -Fxz                    → Detailed hardware and software info
+fastfetch                    → Fast Neofetch alternative
+sudo lshw -short             → Hardware summary
+sudo hwinfo --short          → Short hardware info
+lsb_release -a               → Distribution info
+cat /proc/mounts             → Show active mounts
+cat /proc/swaps              → Show swap usage
+cat /proc/uptime             → Show uptime in seconds
+
+===========================================================
+🧾 LOGS & DEBUGGING
+===========================================================
+cat /var/log/syslog          → General system log
+cat /var/log/auth.log        → Authentication log
+journalctl -xe               → Systemd logs with errors
+dmesg | grep -i error        → Kernel error messages
+tail -f /var/log/syslog      → Live system log view
+less /var/log/kern.log       → Kernel log file
+lastlog                      → Show last login per user
+journalctl --disk-usage      → Show log file disk usage
+
+===========================================================
+⚡ QUICK INFO COMMANDS
+===========================================================
+sudo apt install neofetch inxi lshw hwinfo dmidecode -y → Install main system tools
+neofetch                    → Show system overview
+inxi -Fxz                   → Show detailed system info
+sudo lshw -short            → Hardware summary
+sudo dmidecode              → Full BIOS/hardware info
+
+===========================================================
+🧠 FULL SYSTEM REPORT SCRIPT
+===========================================================
+sudo bash -c '{
+  echo "=== SYSTEM INFO ==="; uname -a;
+  echo "=== CPU ==="; lscpu;
+  echo "=== MEMORY ==="; free -h;
+  echo "=== DISKS ==="; lsblk; df -h;
+  echo "=== NETWORK ==="; ip a;
+  echo "=== USERS ==="; who; w;
+  echo "=== PROCESSES ==="; ps aux --sort=-%mem | head;
+} > /root/system_legend_report.txt'
+
+cat /root/system_legend_report.txt
