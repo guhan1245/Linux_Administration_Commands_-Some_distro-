@@ -1,0 +1,31 @@
+===========================================================
+📦 PACKAGE MANAGEMENT (APT & DPKG)
+===========================================================
+
+sudo apt update                     → Update package index
+sudo apt upgrade                    → Upgrade all installed packages
+sudo apt full-upgrade               → Upgrade packages including dependencies
+sudo apt dist-upgrade               → Upgrade with handling of dependencies
+
+sudo apt install <package>          → Install a specific package
+sudo apt remove <package>           → Remove a package (keep config files)
+sudo apt purge <package>            → Remove package along with config files
+sudo apt autoremove                 → Remove unused packages and dependencies
+sudo apt clean                      → Clear local repository of package files
+sudo apt autoclean                  → Remove outdated package files
+
+apt list --installed                 → List all installed packages
+apt search <keyword>                 → Search for a package
+apt show <package>                   → Show detailed info about a package
+dpkg -l                              → List all installed .deb packages
+dpkg -i <package.deb>                → Install a .deb package manually
+dpkg -r <package>                     → Remove a .deb package manually
+dpkg -S <file>                        → Find which package owns a file
+
+which <command>                      → Show full path of an executable
+whereis <command>                     → Locate binary, source, and man page
+locate <file>                         → Find file quickly (database search)
+updatedb                               → Update locate database
+
+man <command>                          → Show manual page for a command
+alias                                  → Show all defined shell aliases
