@@ -1,0 +1,18 @@
+===========================================================
+💾 DISK & PARTITION MANAGEMENT
+===========================================================
+
+lsblk                                → List all block devices and partitions
+fdisk -l                               → Display detailed partition table
+parted -l                              → Show all partitions and disk layout
+mount                                  → Show currently mounted filesystems
+mount /dev/sdX1 /mnt                  → Manually mount a partition
+umount /mnt                            → Unmount a mounted filesystem
+df -Th                                 → Show disk usage with filesystem type
+du -sh *                                → Show directory/file size in human-readable format
+blkid                                   → Display UUIDs and filesystem types
+tune2fs -l /dev/sdX1                   → Display ext filesystem details
+sudo smartctl -a /dev/sdX               → Show SMART disk health information
+file /dev/sdX1                           → Identify filesystem type
+badblocks -v /dev/sdX1                  → Check for bad sectors
+ls -lh /mnt                             → List files on mounted partition with sizes
