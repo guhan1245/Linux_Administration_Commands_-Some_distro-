@@ -1,0 +1,16 @@
+===========================================================
+📊 COMPLETE SYSTEM REPORT / QUICK INFO TOOLS
+===========================================================
+
+neofetch                               → Display full system summary (OS, CPU, RAM, GPU, etc.)
+screenfetch                            → Display ASCII logo with system info
+inxi -Fxz                              → Full system report (hardware, kernel, network)
+lshw -short                            → Short summary of all hardware
+lshw -html > report.html               → Generate full hardware report in HTML format
+hwinfo --short                         → Quick hardware info summary
+dmidecode -t system                    → BIOS and system information
+dmidecode -t memory                    → Detailed memory (RAM) information
+lsusb                                  → List all USB devices
+lspci                                  → List all PCI devices
+lsscsi                                 → List all SCSI devices
+lsblk -f                               → Show block devices with filesystem i
