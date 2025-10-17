@@ -1,0 +1,29 @@
+===========================================================
+⚡ QUICK SYSTEM INFO COMMANDS
+===========================================================
+
+neofetch                             → Display fancy system overview with ASCII logo
+screenfetch                           → Alternative system summary with logo
+inxi -Fxz                              → Detailed hardware and software info
+fastfetch                              → Fast alternative to neofetch
+sudo lshw -short                        → Display hardware summary
+sudo hwinfo --short                     → Show short hardware information
+lsb_release -a                          → Show Linux distribution details
+uname -a                                → Display kernel and system info
+cat /proc/version                        → Show kernel version and build info
+cat /proc/mounts                         → Display active mounts
+cat /proc/swaps                          → Show swap usage
+cat /proc/uptime                         → Show system uptime in seconds
+
+# Full system report script (creates report file)
+sudo bash -c '{
+  echo "=== SYSTEM INFO ==="; uname -a;
+  echo "=== CPU ==="; lscpu;
+  echo "=== MEMORY ==="; free -h;
+  echo "=== DISKS ==="; lsblk; df -h;
+  echo "=== NETWORK ==="; ip a;
+  echo "=== USERS ==="; who; w;
+  echo "=== PROCESSES ==="; ps aux --sort=-%mem | head;
+} > /root/system_legend_report.txt'
+
+cat /root/system_legend_report.txt       → View generated system report
